@@ -4,16 +4,16 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 6月 16 16:14:43 2017 (+0800)
-;; Last-Updated: 五 6月 16 16:23:02 2017 (+0800)
+;; Last-Updated: 五 6月 16 16:26:13 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 2
+;;     Update #: 3
 ;; URL: http://wuhongyi.cn -->
 
 # 基础
 
 ## HTML 标题
 
-HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的。
+HTML 标题（Heading）是通过 \<h1\> - \<h6\> 等标签进行定义的。
 
 ```html
 <h1>This is a heading</h1>
@@ -23,7 +23,7 @@ HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的。
 
 ## HTML 段落
 
-HTML 段落是通过 <p> 标签进行定义的。
+HTML 段落是通过 \<p\> 标签进行定义的。
 
 ```html
 <p>This is a paragraph.</p>
@@ -32,7 +32,7 @@ HTML 段落是通过 <p> 标签进行定义的。
 
 ## HTML 链接
 
-HTML 链接是通过 <a> 标签进行定义的。
+HTML 链接是通过 \<a\> 标签进行定义的。
 
 ```html
 <a href="http://www.w3school.com.cn">This is a link</a>
@@ -43,7 +43,7 @@ HTML 链接是通过 <a> 标签进行定义的。
 
 ## HTML 图像
 
-HTML 图像是通过 <img> 标签进行定义的。
+HTML 图像是通过 \<img\> 标签进行定义的。
 
 ```html
 <img src="w3school.jpg" width="104" height="142" />
