@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>心形</title>
+	<style>
+		div{
+			width:200px;
+			height: 200px;
+			margin: 200px auto;
+			background-color: red;
+			position: relative;
+		-webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: bottom right;
+       -moz-transform-origin: bottom right;
+        -ms-transform-origin: bottom right;
+         -o-transform-origin: bottom right;
+            transform-origin: bottom right;
+	
+		}
+		div::before{
+			content: "";
+			width: 100px;
+			height: 200px;
+			background-color: red;
+			border-radius: 100px 0px 0px 100px;
+			position: absolute;
+			left:-100px;
+			top:0px;
+		}
+		div::after{
+			content: "";
+			width: 200px;
+			height: 100px;
+			background-color: red;
+			border-radius: 100px 100px 0px 0px;
+			position: absolute;
+			left:0px;
+			top:-100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div></div>
+</body>
+</html>

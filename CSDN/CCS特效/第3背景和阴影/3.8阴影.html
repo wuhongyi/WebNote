@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>阴影</title>
+	<style>
+		.div01{
+			width:300px;
+			height: 400px;
+			margin: 20px auto;
+			background-color: transparent;
+			box-shadow: 0px 0px 40px 40px rgba(0,0,0);
+			box-shadow:
+			/*
+			第一个参数[10px]: 阴影相对于原容器横向偏移量。正数往右，负数往左。
+			第二个参数[9px]: 阴影相对于原容器纵向偏移量。正数往下，负数往上。
+			第三个参数【8px】:阴影的长度
+			第四个参数【gray】:阴影的颜色
+			*/
+		}
+		
+		.div02{
+			width:300px;
+			height: 400px;
+			margin: 20px auto;
+			background-color: navy;
+			box-shadow: 5px 5px 5px green inset;
+			/*
+			第一个参数[10px]: 阴影相对于原容器横向偏移量。正数往右，负数往左。
+			第二个参数[9px]: 阴影相对于原容器纵向偏移量。正数往下，负数往上。
+			第三个参数【8px】:阴影的长度
+			第四个参数【gray】:阴影的颜色
+			*/
+		}
+		.div03{
+			width: 350px;
+			height: 450px;
+			margin: 20px auto;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		.div03>.header{
+			width: 350px;
+			height: 350px;
+			background-color: rgb(76,175,80);
+			color:white;
+			font-size:100px;
+			font-weight: bold;
+			font-family: 微软雅黑;
+			text-align: center;
+			line-height: 350px;
+			
+		}
+		.div03>.content{
+			width: 350px;
+			height: 100px;
+			background-color: white;
+			color:#000;
+			font-size:25px;
+			font-weight:400;
+			font-family: 微软雅黑;
+			text-align: center;
+			line-height: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="div01"></div>
+	<div class="div02"></div>
+	<div class="div03">
+		<div class="header">1</div>
+		<div class="content">January 1, 2016</div>
+	</div>
+</body>
+</html>

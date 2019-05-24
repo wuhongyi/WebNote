@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>线性渐变背景的角度和重复</title>
+	<style>
+		.div01{
+			width:400px;
+			height: 300px;
+			margin: auto;
+			background: linear-gradient(to bottom, blue,green) /* 指明了度数，就不需要写 right,top,left */
+		}
+		.div02{
+			width:400px;
+			height: 300px;
+			margin: auto;
+			background: -webkit-linear-gradient(170deg, red, blue); /*chrome, Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(170deg, red, blue); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(170deg, red, blue); /* Firefox 3.6 - 15 */
+			background: linear-gradient(170deg, blue,green)
+				/* 指明了度数，就不需要写 right,top,left 
+				如果指明了度数，颜色是反的。
+				*/
+		}
+		.div03{
+			width:400px;
+			height: 300px;
+			margin: 20px auto;
+			background: repeating-linear-gradient(30deg,blue,red 10%, green 20%)
+		}
+	</style>
+</head>
+
+<body>
+	<div class="div01"></div>
+	<div class="div02"></div>
+	<div class="div03"></div>
+</body>
+</html>

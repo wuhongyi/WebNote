@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6.5动画的基本介绍</title>
+	<style>
+		
+		body{
+			padding:0px;
+			margin: 0px;
+		}
+		.car{
+			width:250px;
+			height:120px;
+			margin-left: 200px;
+			margin-top: 200px;
+			background-color: transparent;
+			position: relative;
+		}
+		.car>.top{
+			width:100px;
+			height: 50px;
+			position: absolute;
+			left:55px;
+			top:0px;
+			background-color:transparent;
+			border-radius: 70px 70px 0 0;
+			border: solid 20px navy;
+			animation:run01 3s ease-in-out 0s infinite alternate;
+		}
+		.car>.middle{
+			width:250px;
+			height: 50px;
+			background-color: navy;
+			border-radius:100px 100px 0px 0px;
+			position: absolute;
+			top:50px;
+			left: 0px;
+			animation:run01 3s ease-in-out 0s infinite alternate;
+	
+		}
+		.car>.bottom01{
+			width:40px;
+			height:40px;
+			position: absolute;
+			left:30px;
+			top:65px;
+			background-color:navy;
+			border-radius: 50%;
+			border: solid 10px #FFF;
+			color:#FFF;
+			font-size: 26px;
+			text-align: center;
+			height: 40px;
+			animation:run 3s ease-in-out 0s infinite alternate ;
+	
+		}
+		.car>.bottom02{
+			width:40px;
+			height:40px;
+			position: absolute;
+			left:150px;
+			top:65px;
+			background-color:navy;
+			border-radius: 50%;
+			border: solid 10px #FFF;
+			color:#FFF;
+			font-size: 26px;
+			text-align: center;
+			height: 40px;
+			animation:run 3s ease-in-out 0s infinite alternate;
+		}
+		@keyframes run{
+			0%{
+				transform: translateX(0px) rotate(0deg);
+			}
+			100%
+			{
+				transform: translateX(800px) rotate(3600deg);
+			}
+		}
+		@keyframes run01{
+			0%{
+				transform: translateX(0px);
+			}
+			100%
+			{
+				transform: translateX(800px);
+			}
+		
+		}
+	</style>
+</head>
+
+<body>	
+	
+	<div class="car">
+		<div class="top"></div>
+		<div class="middle"></div>
+		<div class="bottom01">转</div>
+		<div class="bottom02">转</div>
+	</div>
+</body>
+</html>

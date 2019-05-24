@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6.2 过渡的属性</title>
+	<style>
+		.div01{
+			width:400px;
+			height: 300px;
+			background-color: navy;
+			margin: 30px auto;
+			color:#FFF;
+			font-size:60px;
+			font-family: 微软雅黑;
+			text-align: center;
+			line-height: 300px;
+			/* 指定过渡的属性 
+			transition-property: font-size;
+			transition-duration: 1.2s;*/
+			/* 两个属性可以简写：*/
+			transition: font-size 1.2s;
+		}
+		.div01:hover{
+			font-size:90px;
+		}
+		.div02{
+			width:400px;
+			height: 300px;
+			background-color: navy;
+			margin: 30px auto;
+			color:#FFF;
+			font-size:60px;
+			font-family: 微软雅黑;
+			text-align: center;
+			line-height: 300px;
+			/* 指定过渡的属性: 逐一属性书写*/
+			transition-property: all;  /*这个对象的全部*/
+			transition-duration: 1.2s;
+			transition-delay: 1s;
+			transition-timing-function: linear;
+			
+			/* 指定过渡的属性: 简写--  property duration timing-function delay*/
+			transition: all 1.2s linear 1s ;
+		}
+		.div02:hover{
+			transform: scale(1.4,1.4);
+		}
+		.div03{
+			width:150px;
+			height: 150px;
+			margin: 40px auto;
+			background-color: darkblue;
+			border-radius: 75px;
+			transition: transform 2s ease 1s;
+			color:white;
+			font-size:40px;
+			text-align: center;
+			line-height: 150px;
+		}
+		.div03:hover{
+			transform: translateX(500px) rotate(720deg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="div01">CSS过渡</div>
+	<div class="div02">CSS过渡</div>
+	<div class="div03">球</div>
+</body>
+</html>

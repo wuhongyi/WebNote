@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>5.2 移动3D</title>
+	<style>
+		* {
+			padding:0px;
+			margin: 0px;
+		}
+		body{
+			perspective: 500px; /* 透视/景深：*/
+		}
+		.out{
+			width:200px;
+			height: 200px;
+			background-color: transparent;
+			border: 1px solid navy;
+			margin: 50px auto;
+			position: relative;
+			perspective: 500px; /* 透视/景深：*/
+			transform: rotateY(80deg);
+			transform-style:preserve-3d;
+
+		}
+		.out>div{
+			position:absolute;
+			top:50px;
+			left:50px;
+			width:100px;
+			height: 100px;
+		}
+		.out>.inner01{
+	
+			background-color: navy;
+		
+			/* 横向： x轴移动
+			transform: translate3d(30px,0,0);*/
+			/* 纵向向： y轴移动
+			transform: translate3d(0,30px,0);*/
+			/* 远近移动：Z轴移动 
+			 perspective: 透视/景深：
+			 直接感受：相同物体越远小，越近越大
+			*/
+			transform: translateZ(40px);
+		}
+		.out>.inner02{
+			background-color: red;
+			transform: translateZ(-40px);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="out">
+		<div class="inner01">
+			
+		</div>
+		<div class="inner02">
+			
+		</div>
+	</div>
+</body>
+</html>

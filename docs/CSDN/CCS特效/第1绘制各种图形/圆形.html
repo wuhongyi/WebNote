@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>圆形</title>
+	<style>
+		*{
+			padding:0px;
+			margin:0px
+		}
+		.div01{
+			width:300px;
+			height: 300px;
+			margin: 50px auto;
+			background-color: navy;
+			border-radius: 50%;  /*使用百分比和具体的值都可以*/
+			background-image: url(11.jpg);
+			background-repeat: no-repeat; 
+			background-size:cover;
+		}
+		.div02{
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+			background-color: transparent;
+			border-radius: 250px;  
+			border: solid yellow 100px;
+			background-image: url(11.jpg);
+			background-repeat: no-repeat;
+			background-size:contain;
+			/* 设置成圆环的两种方法：
+			1. border-radius ：50%  border：另外设置
+			2. border-radius: 半径+border值
+			*/
+		}
+		.div03{
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+			background-color: green;
+			border-radius: 80px;  
+			border: solid yellow 50px;
+			background-image: url(11.jpg);
+			background-repeat: no-repeat;
+			background-size:cover;
+		}
+		.div04{
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+			border-radius: 50%; 
+			background-image: url(11.jpg);
+			background-repeat: no-repeat;
+			background-size:cover;
+		}
+		.div04>div{
+			width: 250px;
+			height: 250px;
+			border: rgba(255,255,255,0.5) solid 25px;
+			border-radius: 50%; /* border-radius:150px */
+		}
+		.div05{
+			width:400px;
+			height: 200px;
+			margin: 20px 20px 20px 20px;
+			background-color: navy;
+			border-radius: 300px 0 0 300px /100px 0 0 100px ;
+			float:left;
+		}
+		.div06{
+			width:400px;
+			height: 200px;
+			margin-right:20px 20px 20px 0px;
+			background-color: navy;
+			float:left;
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	<div class="div01"></div>
+	<div class="div02"></div>
+	<div class="div03"></div>
+	<div class="div04">
+		<div></div>
+	</div>
+	<div class="div05"></div>
+	<div class="div06"></div>
+	<div class="div07"></div>
+</body>
+</html>

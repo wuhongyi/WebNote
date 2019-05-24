@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6.5 动画的基本实现</title>
+	<style>
+		/* 原先正方形 容器 --》圆型的  。。。。*/
+		
+		.div01{
+			width:300px;
+			height: 300px;
+			background-color: lightblue;
+			margin: 40px auto;
+			/*第二步：调用声明的动画 [指出逐一属性及值]
+			animation-name: demo01;
+			animation-duration: 4s;
+			animation-timing-function:linear;
+			animation-delay: 0s;*/
+			/*第二步：调用声明的动画 [快捷方式]*/
+			-moz-animation: demo01 4s linear 0s;  /* Firefox */
+			-webkit-animation: demo01 4s linear 0s; /* Safari 和 Chrome */
+			-o-animation: demo01 4s linear 0s;/* Opera */
+			animation: demo01 4s linear 0s;/* 通用 */
+		}
+		
+		/*第一步：声明动画 ---通用*/
+		@keyframes demo01{
+			/* 第一种写法
+			from {
+				
+			}
+			20%{
+				
+			}
+			}
+			40%{
+				
+			}
+			60%{
+				
+			}
+			80%{
+				
+			}
+			to{
+				
+			}*/
+			/* 第二种写法*/
+			0% {
+				width:300px;
+				height: 300px;
+				background-color: lightblue;
+			}
+			20%{
+				width:400px;
+				height: 400px;
+				background-color: green;
+				border-radius: 20%
+			}
+			40%{
+				width:500px;
+				height: 500px;
+				background-color: red;
+				border-radius: 40%
+				
+			}
+			60%{
+				width:100px;
+				height: 100px;
+				background-color: red;
+				border-radius: 60%
+			}
+			80%{
+				width:200px;
+				height: 200px;
+				background-color: red;
+				border-radius: 50%
+				
+			}
+			100%{
+				width:200px;
+				height: 200px;
+				background-color: navy;
+				border-radius: 50%;
+				transform: rotateX(30deg);
+			}
+		}
+		/* Firefox */
+		@-moz-keyframes demo01{
+			/* 第一种写法
+			from {
+				
+			}
+			20%{
+				
+			}
+			}
+			40%{
+				
+			}
+			60%{
+				
+			}
+			80%{
+				
+			}
+			to{
+				
+			}*/
+			/* 第二种写法*/
+			0% {
+				width:300px;
+				height: 300px;
+				background-color: lightblue;
+			}
+			20%{
+				width:400px;
+				height: 400px;
+				background-color: green;
+				border-radius: 20%
+			}
+			40%{
+				width:500px;
+				height: 500px;
+				background-color: red;
+				border-radius: 40%
+				
+			}
+			60%{
+				width:100px;
+				height: 100px;
+				background-color: red;
+				border-radius: 60%
+			}
+			80%{
+				width:200px;
+				height: 200px;
+				background-color: red;
+				border-radius: 50%
+				
+			}
+			100%{
+				width:200px;
+				height: 200px;
+				background-color: navy;
+				border-radius: 50%;
+				transform: rotateX(30deg);
+			}
+		}
+		/* Safari 和 Chrome */
+		@-webkit-keyframes demo01{
+			/* 第一种写法
+			from {
+				
+			}
+			20%{
+				
+			}
+			}
+			40%{
+				
+			}
+			60%{
+				
+			}
+			80%{
+				
+			}
+			to{
+				
+			}*/
+			/* 第二种写法*/
+			0% {
+				width:300px;
+				height: 300px;
+				background-color: lightblue;
+			}
+			20%{
+				width:400px;
+				height: 400px;
+				background-color: green;
+				border-radius: 20%
+			}
+			40%{
+				width:500px;
+				height: 500px;
+				background-color: red;
+				border-radius: 40%
+				
+			}
+			60%{
+				width:100px;
+				height: 100px;
+				background-color: red;
+				border-radius: 60%
+			}
+			80%{
+				width:200px;
+				height: 200px;
+				background-color: red;
+				border-radius: 50%
+				
+			}
+			100%{
+				width:200px;
+				height: 200px;
+				background-color: navy;
+				border-radius: 50%;
+				transform: rotateX(30deg);
+			}
+		}
+		/* Opera */
+		@-o-keyframes demo01{
+			/* 第一种写法
+			from {
+				
+			}
+			20%{
+				
+			}
+			}
+			40%{
+				
+			}
+			60%{
+				
+			}
+			80%{
+				
+			}
+			to{
+				
+			}*/
+			/* 第二种写法*/
+			0% {
+				width:300px;
+				height: 300px;
+				background-color: lightblue;
+			}
+			20%{
+				width:400px;
+				height: 400px;
+				background-color: green;
+				border-radius: 20%
+			}
+			40%{
+				width:500px;
+				height: 500px;
+				background-color: red;
+				border-radius: 40%
+				
+			}
+			60%{
+				width:100px;
+				height: 100px;
+				background-color: red;
+				border-radius: 60%
+			}
+			80%{
+				width:200px;
+				height: 200px;
+				background-color: red;
+				border-radius: 50%
+				
+			}
+			100%{
+				width:200px;
+				height: 200px;
+				background-color: navy;
+				border-radius: 50%;
+				transform: rotateX(30deg);
+			}
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="div01"></div>
+</body>
+</html>

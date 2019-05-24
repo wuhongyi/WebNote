@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6.1 过渡的介绍</title>
+	<style>
+		.div01{
+			width:285px;
+			height: 150px;
+			margin: 40px auto;
+			overflow: hidden;
+		}
+		.div01>img{
+			transition:all 2s ;  /* all---所有属性  2s--2秒表示这个周期*/
+		}
+		.div01>img:hover{
+			transform: scale(2);
+		}
+		.div02{
+			width:285px;
+			height: 150px;
+			margin: 40px auto;
+			overflow: hidden;
+		}
+		.div02>img{
+			transition:all 1s; /* all---所有属性  1s--1秒表示这个周期*/
+		}
+		.div02>img:hover{
+			border-radius: 20px/40px;
+		}
+		.div03{
+			width:150px;
+			height: 150px;
+			margin: 40px auto;
+			background-color: darkblue;
+			border-radius: 75px;
+			transition: transform 2s linear;
+			color:white;
+			font-size:40px;
+			text-align: center;
+			line-height: 150px;
+		}
+		.div03:hover{
+			transform: translateX(500px) rotate(720deg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="div01">
+		<img src="7qianduan.png">
+	</div>
+	<div class="div02">
+		<img src="7qianduan.png">
+	</div>
+	<div class="div03">球
+	</div>
+</body>
+</html>

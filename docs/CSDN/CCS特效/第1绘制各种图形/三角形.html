@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>三角形</title>
+	<style>
+		*{
+			padding:0px;
+			margin:0px
+		}
+		div{
+			width:100%;
+			height:200px;
+			margin: 10px;
+			background-color: transparent
+	
+		}
+		div>div{
+			float:left;
+			width:0px;
+			height: 0px;
+			border:100px solid green;
+		}
+		div>.left{
+			border-top-color:transparent;
+			border-bottom-color:transparent;
+			border-right-color:transparent;
+		}
+		div>.right{
+			border-top-color:transparent;
+			border-bottom-color:transparent;
+			border-left-color:transparent;
+			position: relative;
+			left:-100px;
+		}
+		div>.top{
+			border-right-color:transparent;
+			border-bottom-color:transparent;
+			border-left-color:transparent;
+			position: relative;
+			top:100px;
+		}
+		div>.bottom{
+			border-right-color:transparent;
+			border-top-color:transparent;
+			border-left-color:transparent;
+			position: relative;
+			left:-50px;
+			top:-50px;
+		}
+		.div01{
+			width:0px;
+			height: 0px;
+			border-right: solid 100px transparent;
+			border-top:solid 150px transparent;
+			border-left:solid 200px transparent;
+			border-bottom: solid 250px lightblue;
+			
+		}
+		.div02{
+			width:0px;
+			height: 0px;
+			border-right: solid 100px transparent;
+			border-top:solid 100px transparent;
+			border-left:solid 100px transparent;
+			border-bottom: solid 170px lightblue;
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div>
+		<div class="left"></div>
+		<div class="right"></div>
+		<div class="top"></div>
+		<div class="bottom"></div>
+	</div>
+	
+	<div class="div01"></div>
+	
+	<div class="div02"></div>
+</body>
+</html>

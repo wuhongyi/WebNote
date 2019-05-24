@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>径向渐变的位置和大小</title>
+	<style>
+		.div01{
+			width:400px;
+			height: 300px;
+			background-image: radial-gradient(100px circle at 180px 60px,lightblue,green);
+			/*
+			   形状（circle ellipse） at(位置： 写法01： 20px  20px ,写法02： 40% ，40%  写法：top center)
+			
+			   大小：（比如圆形：半径：300px）
+			*/	
+		}
+		.div02{
+			width:400px;
+			height: 300px;
+			margin: 20px;
+			background-image: radial-gradient(closest-side circle at 30% 30%,lightblue,green);
+		}
+		.div03{
+			width:400px;
+			height: 300px;
+			margin: 20px;
+			background-image: radial-gradient(closest-corner circle at 30% 30%,lightblue,green);
+		}
+		.div04{
+			width:400px;
+			height: 300px;
+			margin: 20px;
+			background-image: radial-gradient(farthest-side circle at 30% 30%,lightblue,green);
+		}
+		.div05{
+			width:400px;
+			height: 300px;
+			margin: 20px;
+			background-image: radial-gradient(farthest-corner circle at 30% 30%,lightblue,green);
+		}
+	
+	
+	</style>
+</head>
+
+<body>
+	<div class="div01"></div>
+	<div class="div02">closest-side</div>
+	<div class="div03">closest-corner</div>
+	<div class="div04">farthest-side</div>
+	<div class="div05">farthest-corner</div>
+</body>
+</html>

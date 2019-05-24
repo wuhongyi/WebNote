@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6.4 过渡的案例演示</title>
+	<style>
+		body{
+			padding:0px;
+			margin: 0px;
+			background-color: rgb(45,45,45);
+		}
+		.out{
+			height:300px;
+			width: 1200px;
+			margin: 140px auto;
+		}
+		.out>div{
+			width: 200px;
+			height: 200px;
+			float:left;
+			margin-right: 50px;
+			border: 15px solid #FFF;
+			border-radius: 20px;
+		}
+		
+		/* 第一个图的特效 ：变成圆，并产生阴影 */
+		.out>.one{
+			overflow: hidden;
+			transition: all 1s ease;
+		}
+		.out>.one:hover{
+			cursor: pointer;
+			border-radius: 50%;
+			box-shadow: 0px 0px 40px rgba(255,255,255,0.7);
+		}
+		
+		/* 第二个图的特效 ：图形放大，并产生阴影 */
+		.out>.two{
+			overflow: hidden;
+			transition: all 1s ease;
+		}
+		.out>.two:hover{
+			box-shadow: 0px 0px 20px 5px rgba(255,255,255,0.7);
+		}
+		.out>.two>img{
+			transition: all 1s ease;
+		}
+		.out>.two>img:hover{
+			cursor: pointer;
+			transform: scale(1.5);
+			transform-origin: left top;
+		}
+		/* 第三个图的特效 ：图形倾斜10deg，并产生阴影 */
+		.out>.three{
+			overflow: hidden;
+			transition: all 0.5s ease;
+		}
+		.out>.three:hover{
+			transform: rotateZ(10deg);
+			transform: 50%;
+			box-shadow: 0px 0px 20px 5px rgba(255,255,255,0.7);
+		}
+		
+		/* 第四个图的特效 ：变成黑白，并产生阴影 */
+		
+		.out>.four{
+			overflow: hidden;
+			transition: all 1s ease;
+		}
+		.out>.four:hover{
+			filter: grayscale(100%); /* 变成黑白 */
+			box-shadow: 0px 0px 20px 5px rgba(255,255,255,0.7);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="out">
+		<div class="one"><img src="image1.jpg"></div>
+		<div class="two"><img src="image2.jpg"></div>
+		<div class="three"><img src="image3.jpg"></div>
+		<div class="four"><img src="image4.jpg"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>心形</title>
+	<style>
+		*{
+			padding:0px;
+			margin: 0px;
+		}
+	.bagua {
+    width: 120px;
+    height: 62px;
+    border-color: #000;
+    border-width: 2px 2px 60px 2px;
+    border-style: solid;
+    background: #fff;
+    border-radius: 100%;
+    position: relative;
+	margin: auto;
+}
+ 
+.bagua:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background: #000;
+    border: 23px solid #fff;
+    border-radius: 100%;
+}
+ 
+.bagua:after {
+    content: "";
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 23px solid #000;
+    border-radius: 100%;
+}
+
+	</style>
+</head>
+
+<body>
+	<div class="bagua"></div>
+</body>
+</html>

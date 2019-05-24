@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>扇形和吃豆人</title>
+	<style>
+		*{
+			padding:0px;
+			margin:0px
+		}
+		.out{
+			width:0px;
+			height:0px;
+			margin-left: 400px;
+			background-color:transparent;
+			border:solid 100px navy;
+			border-right-color: transparent;
+			border-radius: 100px;
+			position: relative;
+		}
+		.out>div{
+			width:20px;
+			height:20px;
+			background-color: white;
+			border-radius: 10px;
+			position: absolute;
+			top:-70px;
+			left:-20px;
+		}
+		.out>div>div{
+			width:10px;
+			height:10px;
+			background-color: navy;
+			border-radius:5px;
+			position: absolute;
+			top:5px;
+			left:5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="out">
+		<div>
+			<div></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		/* 多标签选择：一次应用到多种标签  */
+		p,h2{
+			font-family: 微软雅黑;
+			font-size: 22px;
+			font-weight:bold;
+			color:green;
+		}
+		
+		/* 多层选择：*/
+		div > div > h3{
+			font-family: 微软雅黑;
+			font-size: 30px;
+			font-weight:bold;
+			color:red;
+		}
+		/* 类选择器：不属于同一种标签（部分），需要做相同的设置
+			把某一类标签设置成同一个属性！！！！！！
+		
+			类选择器可以和多标签、多层结合使用
+		*/
+	
+		/* ID选择器： ID在一个HTML文件中不能重复 
+		ID选择器和多标签结合可以
+		ID选择器和多层无法结合使用
+		
+		*/
+		#div div p{
+			font-family: 微软雅黑;
+			font-size: 30px;
+			color:red;
+			font-weight: bold;
+		}
+		
+       /* html 不区分大小写-- 推荐使用小写
+		ID选择器和类选择器： 区分大小写！
+		*/
+		
+	</style>
+</head>
+<body>
+	<p class="style01"> 联科教育01 </p>
+	<p id="keyword"> 联科教育02 </p>
+	<p> 联科教育03 </p>
+	<p> 联科教育04 </p>
+	<p> 联科教育05 </p>
+	<div id="div01" style="width:500px;height: 400px;">
+		<div  style="width:400px;height: 300px;">
+			<p> 内嵌h5标签 </p>
+		</div>
+	</div>
+
+	
+</body>
+</html>

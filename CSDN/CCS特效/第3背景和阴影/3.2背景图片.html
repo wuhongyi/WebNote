@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>背景图片</title>
+	<style>
+		.div01{
+			width: 400px;
+			height: 300px;
+			background-color: lightblue;
+			margin: 10px;
+		}
+		.div02{
+			width: 400px;
+			height: 300px;
+			background-color: lightblue;
+			background-image: url(qianduan.png);
+			background-repeat: no-repeat;
+			background-position: left bottom;
+			margin: 10px;
+		}
+		.div03{
+			width: 400px;
+			height: 300px;
+			border:dotted green 10px;
+			padding: 30px;
+			background-color:lightblue;
+			background-image: url(qianduan.png);
+			background-repeat: no-repeat;
+			background-origin: border-box;  /* 指定放置的位置 */
+			background-clip: content-box; /* 从哪里保留*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class="div01"><img src="./qianduan.png"></div>
+	<div class="div02"></div>
+	<div class="div03"></div>
+</body>
+</html>
