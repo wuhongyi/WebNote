@@ -4,12 +4,14 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 6月 16 17:07:07 2017 (+0800)
-;; Last-Updated: 五 6月 16 17:07:43 2017 (+0800)
+;; Last-Updated: 日 6月 30 16:42:54 2019 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 1
+;;     Update #: 2
 ;; URL: http://wuhongyi.cn -->
 
 # HTML 属性
+
+> http://www.w3school.com.cn/tags/index.asp
 
 HTML 标签可以拥有属性。属性提供了有关 HTML 元素的更多的信息。  
 属性总是以名称/值对的形式出现，比如：name="value"。  
