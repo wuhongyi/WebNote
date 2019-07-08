@@ -1,13 +1,12 @@
 #!/bin/bash
 
-rm -r docs
+rm -rf docs/*
 
-gitbook build
+make clean
+make html
 
-mv _book docs
+cp -r build/html/* docs/
 
-git add --all
-git commit -m ""
-git push -u origin master
+make clean
 
-rm -r docs
+touch docs/.nojekyll

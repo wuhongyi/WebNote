@@ -4,23 +4,149 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 五 5月 24 19:34:38 2019 (+0800)
-;; Last-Updated: 六 5月 25 13:16:40 2019 (+0800)
+;; Last-Updated: 一 7月  8 22:07:51 2019 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 3
+;;     Update #: 83
 ;; URL: http://wuhongyi.cn -->
 
 <!doctype html> <!-- 声明文档类型为HTML -->
 <html>
   <head>
-    <meta charset="utf-8"> <!-- 定义字符的编码 -->
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta http-equiv="charset" content="utf-8">
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+
+    <meta name="author" content="Hongyi Wu">
+    <meta name="description" content="xxxxxxxxxxxxxxxxxxxx">
+    <meta name="keywords" content="xxx, xxx, xxx, xxx">
+    <meta name="generator" content="emacs">
+    <meta name="revised" content="Hongyi Wu, 05/27/19">
+
+    <!-- 
+	 CSS盒子模型
+
+	 外边距  margin:  10px 20 px 30px 40px;  上右下左距离  
+	                 10 px;                 四个值一样
+			 10 px 20px;            上下第一个，左右第二个
+			 10 px 20px 30px;       上右下，左与右相等
+	                 10px auto;             auto居中
+			 10px 20px auto;
+			 10px 20px 30px auto;
+			 10px 20px 30px 40px auto;
+	 边框    border:  12px solid yellow;
+	 填充    padding: 10px 20px 30px 40px;  上右下左距离  
+	                 10 px;                 四个值一样
+			 10 px 20px;            上下第一个，左右第二个
+			 10 px 20px 30px;       上右下，左与右相等
+	 文本    content 设置宽度高度其实是设置这个的参数
+      -->
+
+    <!-- HTML不区分大小写 --推荐使用小写  -->
+    <!-- ID选择器和类选择器：区分大小写 -->
+    
+    <style type="text/css">/* 优先级: 内联>内嵌>传递 */
+      div {/*针对标签进行设置*/
+	  margin: auto;/*居中设置*/
+	  background-color: green;
+	  /* font-size: 22px; */
+	  /* font-weight: bold; */
+	  /* color: red; */
+	  }/*必须设置 width: 200px; height: 300px;*/
+
+      /* div1,div2,div3 {}  多标签选择，一次应用到多种标签 */
+      /* div1 > div2 > div3 {}  多层标签*/
+
+      /* .classname {}  类选择器：不属于同一种标签（部分），需要做相同的设置  把某一类的标签设置成同一个属性*/
+      /* #idname {} ID选择器： ID在一个HTML文件中不能重复*/
+
+      /*
+      文字居中
+      - 横向居中：text-align: center;
+      - 纵向居中：vertical-align: middle; display: table-cell;
+      */
+      
+      div.news1 { padding: 5px; text-align:center;}
+      div.news2 { padding: 5px; }
+      dir.test { padding: 5px; text-align:center;}
+    </style>
+
+    
     <title>  title  </title>
   </head>
   
-  <body>
-    
-    
-    
+  <body style="margin: 0px auto; width: 1200px;">
+    <!-- header页面头部 -->
+    <header style="margin: auto; height: 100px;">
+      <h1>Welcome to my homepage</h1>
+      <p>My name is Donald Duck</p>
+    </header>
+    <!-- nav导航栏 -->
+    <nav style="height: 30px;">
+      <a href="/html/">HTML</a> |
+      <a href="/css/">CSS</a> |
+      <a href="/js/">JavaScript</a> |
+      <a href="/jquery/">jQuery</a>
+    </nav>
+
+    <!-- section内容块 -->
+    <div class="content" style="width: 1200px;">
+
+      <div id="" class="" style="width: 1200px; height: 300px; ">
+	refresh.
+	<p>本文档的 meta 属性标识了创作者和编辑软件。</p>
+	<p>本文档的 meta 属性标识了创作者和编辑软件。</p>
+      </div>
+
+      <div id="" class="" style="width: 1200px; height: 400px;">
+	refresh.
+	<p>本文档的 meta 属性标识了创作者和编辑软件。</p>
+	<p>本文档的 meta 属性标识了创作者和编辑软件。</p>
+      </div>    
+      
+
+
+      <h1 style="color:blue; text-align:center">This is a header</h1>
+      <p style="color:red">This is a paragraph.</p>
+
+      <h1>NEWS WEBSITE</h1>
+      <p>some text. some text. some text...</p>
+      ...
+
+      <div class="news1">
+	<h2>News headline 1</h2>
+	<p>some text. some text. some text...</p>
+	...
+      </div>
+
+      <div class="news2">
+	<h2>News headline 2</h2>
+	<p>some text. some text. some text...</p>
+	...
+      </div>
+
+      <dir class="test">
+	<li>HTML </li>
+	<li>XHTML</li>
+	<li>CSS  </li>
+      </dir>
+
+      <form>
+	<label for="male">Male</label>
+	<input type="radio" name="sex" id="male" />
+	<br />
+	<label for="female">Female</label>
+	<input type="radio" name="sex" id="female" />
+      </form>
+
+      
+    </div>
+
+    <!-- footer页脚 -->
+    <footer style="text-align: center">
+      <p>Copyright @ Hongyi Wu(吴鸿毅) &nbsp;&nbsp;&nbsp;&nbsp;  Contact information: <a href="mailto:wuhongyi@qq.com"> wuhongyi@qq.com</a></p>
+    </footer>
   </body>
+  
 </html>
 
 
