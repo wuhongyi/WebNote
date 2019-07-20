@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 日 7月  7 21:28:21 2019 (+0800)
-;; Last-Updated: 一 7月  8 22:07:41 2019 (+0800)
+;; Last-Updated: 日 7月 21 01:42:31 2019 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 13
+;;     Update #: 18
 ;; URL: http://wuhongyi.cn -->
 
 <!doctype html> <!-- 声明文档类型为HTML -->
@@ -60,9 +60,136 @@
 
       /* .classname {}  类选择器：不属于同一种标签（部分），需要做相同的设置  
 	 把某一类的标签设置成同一个属性
-	 类选择器可以可以和多标签、多层结合使用
-     */
+	 类选择器可以可以和多标签、多层结合使用 */
+      
       /* #idname {} ID选择器： ID在一个HTML文件中不能重复*/
+
+      /* 用，来分割标签/类/ID  分组选择器：对一组标签进行相同属性设置
+	 div1,div2,#aaa,.bbb {}   */
+
+      /*子类选择器： 对指定标签的直接子类进行配置
+       div > div > p {}  */
+      
+      /*包含选择器/后代选择器： 对指定标签的所有后代都生效
+       div  div  p {}  */
+
+      /*属性选择器*/
+      /*组合选择器*/
+      /*伪类选择器*/
+      /*选择器优先级*/
+
+      /*
+      文字居中
+      - 横向居中：text-align: center;
+      - 纵向居中：vertical-align: middle; display: table-cell;
+      */
+
+      /*
+	文字属性
+	文字颜色      color: #999999;
+	文字字体      font-family: 宋体, sans-serif;
+	文字大小      font-size: 9px;
+	文字斜体      font-style: itelic;
+	小字体	     font-variant: small-caps;
+	字间距离      letter-spacing: 1px;
+	设置行高      line-height: 200%;
+	文字粗体      font-weight: bold;
+	下标字	     vertical-align: sub;
+	上标字	     vertical-align: super;
+	加删除线      text-decoration: line-through;
+	加顶线        text-decoration: overline;			
+	加下划线      text-decoration: underline;
+	删除链接下划线 text-decoration: none;
+	首字大写      text-transform: capitalize;
+	英文大写      text-transform: uppercase;
+	英文小写      text-transform: lowercase;
+	文字右对齐    text-align: right;
+	文字左对齐    text-align: left;
+	文字居中对齐   text-align: center;
+	文字分散对齐   text-align: justify;
+	垂直向上对齐   vertical-align: top;
+	垂直向下对齐   vertical-align: bottom;
+	垂直居中对齐   vertical-align: middle;
+	文字垂直向上对齐 vertical-align: text-top;
+	文字垂直向下对齐 vertical-align: text-bottom;
+     */
+
+
+      /*
+	符号属性     list-style-type: none;
+	不编号       list-style-type: decimal;
+	阿拉伯数字    list-style-type: lower-roman;
+	小写罗马数字  list-style-type: upper-roman;
+	大写罗马数字  list-style-type: lower-alpha;
+	小写英文字母  list-style-type: upper-alpha;
+	大写英文字母  list-style-type: disc;
+	空心圆形符号  list-style-type: circle;
+	实心方形符号  list-style-type: square;
+	图片式符号    list-style-image: url(/dot.gif);
+	凸排         list-style-position: outside;
+	缩进         list-style-position: inside;
+     */
+
+
+      /*
+	背景样式
+	透视背景          background: transparent;
+	背景图片	  	 background-image: url(/image/bg.gif);
+	重复排列，网页默认  background-repeat: repeat;
+	不重复排列         background-repeat: no-repeat;
+	在x轴重复排列      background-repeat: repeat-x;
+	在y轴重复排列      background-repeat: repeat-y;
+	图片x与y轴的位置   background-position: 40px 40px;
+	向上对齐          background-position: top;
+	向下对齐          background-position: buttom;
+	向左对齐          background-position: left;
+	向右对齐          background-position: right;
+	居中对齐          background-position: center;
+     */
+
+
+      /*
+	链接状态  --- 用来控制链接的样式           
+	所有超链接           a
+	超链接文字格式        a:link
+	浏览过的链接文字格式   a:visited
+	按下链接的格式        a:active
+	鼠标转到链接          a:hover
+
+	a{ }
+	a:link{ }
+	光标样式  --- 在链接状态内设置，如a:link{cursor: hand;}
+	链接手指    cursor: hand
+	十字体      cursor: crosshair 
+	箭头朝下    cursor: s-resize
+	十字箭头    cursor: move
+	箭头朝右    cursor: move
+	加一问号    cursor: help
+	箭头朝左    cursor: w-resize
+	箭头朝上    cursor: n-resize
+	箭头朝右上  cursor: ne-resize
+	箭头朝左上  cursor: nw-resize
+	文字I型    cursor: text
+	箭头斜右下  cursor: se-resize
+	箭头斜左下  cursor: sw-resize
+	漏斗       cursor: wait
+     */
+
+      /*
+	框线
+	上框线     border-top: 1px solid #6699cc;
+	下框线	  border-bottom: 1px solid #6699cc;
+	左框线     border-left: 1px solid #6699cc;
+	右框线     border-right: 1px solid #6699cc;
+	
+	实线框     solid
+	虚线框     dotted
+	双线框     double
+	立体内凸框  groove
+	立体浮雕框  rigde
+	凹框       inset
+	凸框       outset
+     */
       
     </style>
     
@@ -71,9 +198,23 @@
   </head>
   
   <body style="margin: 0px auto; width: 1200px;">
-    <!-- header -->
-    
-    <div id="" class="" style="width: 1200px; height: 1000px; "><!-- 主界面 -->
+    <!-- header页面头部 -->
+    <header style="margin: auto; height: 100px;">
+      <h1>Welcome to my homepage</h1>
+      <p>My name is Hongyi Wu</p>
+    </header>
+
+    <!-- nav导航栏 -->
+    <nav style="height: 30px;">
+      <a href="/html/">HTML</a> |
+      <a href="/css/">CSS</a> |
+      <a href="/js/">JavaScript</a> |
+      <a href="/jquery/">jQuery</a>
+    </nav>
+
+
+    <!-- section内容块 -->
+    <div id="" class="content" style="width: 1200px; height: 1000px; "><!-- 主界面 -->
 
       <div id="" class="" style="float: left;"><!-- 水平排列 -->
 	
