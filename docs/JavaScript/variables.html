@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>变量 &mdash; Web Note 0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="JavaScript" href="../JavaScript.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Web Note
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">简介</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HTML.html">基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLshuxing.html">HTML 属性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLbiaoti.html">HTML 标题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLduanluo.html">HTML 段落</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLyangshi.html">HTML 样式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLwenbengeshihua.html">HTML 文本格式化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLyinyong.html">HTML 引用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLlianjie.html">HTML 链接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLtuxiang.html">HTML 图像</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLbiaoge.html">HTML 表格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLliebiao.html">HTML 列表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLliebiao.html#id2">有序列表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLkuai.html">HTML 块</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLlei.html">HTML 类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLbuju.html">HTML布局</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLtoubu.html">HTML头部</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CSS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CSS.html">CSS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">JavaScript</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../JavaScript.html">JavaScript</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">变量</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">变量定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">数据类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">数值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">字符串</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">类型转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">常量</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Note</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>变量</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/JavaScript/variables.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>变量<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>在脚本的开头声明所有变量是个好习惯！</p>
+<p>JavaScript 变量是存储数据值的容器。</p>
+<div class="section" id="id2">
+<h2>变量定义<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>所有 JavaScript 变量必须以唯一的名称的标识。这些唯一的名称称为标识符。</p>
+<p>构造变量名称（唯一标识符）的通用规则是：
+- 名称可包含字母、数字、下划线和美元符号
+- 名称必须以字母开头
+- 名称也可以 $ 和 _ 开头
+- 名称对大小写敏感（y 和 Y 是不同的变量）
+- 保留字（比如 JavaScript 的关键词）无法用作变量名称</p>
+<p><strong>保留词</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">abstract</span>      <span class="nx">arguments</span>       <span class="nx">await</span>   <span class="kr">boolean</span>
+<span class="k">break</span>         <span class="kr">byte</span>    <span class="k">case</span>    <span class="k">catch</span>
+<span class="kr">char</span>  <span class="kr">class</span>   <span class="kr">const</span>   <span class="k">continue</span>
+<span class="kr">debugger</span>      <span class="k">default</span>         <span class="k">delete</span>  <span class="k">do</span>
+<span class="kr">double</span>        <span class="k">else</span>    <span class="kr">enum</span>    <span class="nb">eval</span>
+<span class="kr">export</span>        <span class="kr">extends</span>         <span class="kc">false</span>   <span class="kr">final</span>
+<span class="k">finally</span>       <span class="kr">float</span>   <span class="k">for</span>     <span class="kd">function</span>
+<span class="kr">goto</span>  <span class="k">if</span>      <span class="kr">implements</span>      <span class="kr">import</span>
+<span class="k">in</span>    <span class="k">instanceof</span>      <span class="kr">int</span>     <span class="kr">interface</span>
+<span class="kd">let</span>   <span class="kr">long</span>    <span class="kr">native</span>  <span class="k">new</span>
+<span class="kc">null</span>  <span class="kr">package</span>         <span class="kr">private</span>         <span class="kr">protected</span>
+<span class="kr">public</span>        <span class="k">return</span>  <span class="kr">short</span>   <span class="kr">static</span>
+<span class="kr">super</span>         <span class="k">switch</span>  <span class="kr">synchronized</span>    <span class="k">this</span>
+<span class="k">throw</span>         <span class="kr">throws</span>  <span class="kr">transient</span>       <span class="kc">true</span>
+<span class="k">try</span>   <span class="k">typeof</span>  <span class="kd">var</span>     <span class="k">void</span>
+<span class="kr">volatile</span>      <span class="k">while</span>   <span class="kd">with</span>    <span class="k">yield</span>
+</pre></div>
+</div>
+<p><strong>内建对象的名称、属性和方法</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">Array</span>         <span class="nb">Date</span>    <span class="nb">eval</span>    <span class="kd">function</span>
+<span class="nx">hasOwnProperty</span>        <span class="kc">Infinity</span>        <span class="nb">isFinite</span>        <span class="nb">isNaN</span>
+<span class="nx">isPrototypeOf</span>         <span class="nx">length</span>  <span class="nb">Math</span>    <span class="kc">NaN</span>
+<span class="nx">name</span>  <span class="nb">Number</span>  <span class="nb">Object</span>  <span class="nx">prototype</span>
+<span class="nb">String</span>        <span class="nx">toString</span>        <span class="kc">undefined</span>       <span class="nx">valueOf</span>
+</pre></div>
+</div>
+<p>通过 var 关键词来声明 JavaScript 变量：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">name</span><span class="p">;</span>
+<span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;zxcvbnm&quot;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">nnn</span> <span class="o">=</span> <span class="s2">&quot;qwsazx&quot;</span><span class="p">,</span> <span class="nx">mmm</span> <span class="o">=</span> <span class="mi">789</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>数据类型<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>JavaScript 变量能够保存多种数据类型：数值、字符串值、数组、对象等等：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">length</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>                             <span class="c1">// 数字</span>
+<span class="kd">var</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="s2">&quot;Gates&quot;</span><span class="p">;</span>                      <span class="c1">// 字符串</span>
+<span class="kd">var</span> <span class="nx">cars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Porsche&quot;</span><span class="p">,</span> <span class="s2">&quot;Volvo&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">];</span>         <span class="c1">// 数组</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span><span class="s2">&quot;Bill&quot;</span><span class="p">,</span> <span class="nx">lastName</span><span class="o">:</span><span class="s2">&quot;Gates&quot;</span><span class="p">};</span>    <span class="c1">// 对象</span>
+</pre></div>
+</div>
+<p>JavaScript 拥有动态类型。这意味着相同变量可用作不同类型：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">x</span><span class="p">;</span>               <span class="c1">// 现在 x 是 undefined</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>           <span class="c1">// 现在 x 是数值</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&quot;Bill&quot;</span><span class="p">;</span>      <span class="c1">// 现在 x 是字符串值</span>
+</pre></div>
+</div>
+<p>字符串（或文本字符串）是一串字符（比如 “zxcvbnm”）。字符串被引号包围。可使用单引号或双引号。可以在字符串内使用引号，只要这些引号与包围字符串的引号不匹配：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s alright&quot;</span><span class="p">;</span>             <span class="c1">// 双引号内的单引号</span>
+<span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">&quot;He is called &#39;Bill&#39;&quot;</span><span class="p">;</span>    <span class="c1">// 双引号内的单引号</span>
+<span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s1">&#39;He is called &quot;Bill&quot;&#39;</span><span class="p">;</span>    <span class="c1">// 单引号内的双引号</span>
+</pre></div>
+</div>
+<p>JavaScript 只有一种数值类型。写数值时用不用小数点均可：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">x1</span> <span class="o">=</span> <span class="mf">34.00</span><span class="p">;</span>     <span class="c1">// 带小数点</span>
+<span class="kd">var</span> <span class="nx">x2</span> <span class="o">=</span> <span class="mi">34</span><span class="p">;</span>        <span class="c1">// 不带小数点</span>
+</pre></div>
+</div>
+<p>超大或超小的数值可以用科学计数法来写：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">123</span><span class="nx">e5</span><span class="p">;</span>      <span class="c1">// 12300000</span>
+<span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">123</span><span class="nx">e</span><span class="o">-</span><span class="mi">5</span><span class="p">;</span>     <span class="c1">// 0.00123</span>
+</pre></div>
+</div>
+<p>布尔值只有两个值：true 或 false。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>JavaScript 数组用方括号书写。数组的项目由逗号分隔。下面的代码声明（创建）了名为 cars 的数组，包含三个项目（汽车品牌）：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">cars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Porsche&quot;</span><span class="p">,</span> <span class="s2">&quot;Volvo&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>JavaScript 对象用花括号来书写。对象属性是 name:value 对，由逗号分隔。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span><span class="s2">&quot;Bill&quot;</span><span class="p">,</span> <span class="nx">lastName</span><span class="o">:</span><span class="s2">&quot;Gates&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mi">62</span><span class="p">,</span> <span class="nx">eyeColor</span><span class="o">:</span><span class="s2">&quot;blue&quot;</span><span class="p">};</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返回 undefined。</p></li>
+<li><p>任何变量均可通过设置值为 undefined 进行清空。其类型也将是 undefined。</p></li>
+<li><p>空值与 undefined 不是一回事。空的字符串变量既有值也有类型。</p></li>
+<li><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。</p></li>
+<li><p>不幸的是，在 JavaScript 中，null 的数据类型是对象。</p></li>
+<li><p>可以把 null 在 JavaScript 中是对象理解为一个 bug。它本应是 null。</p></li>
+<li><p>可以通过设置值为 null 清空对象：</p></li>
+<li><p>也可以通过设置值为 undefined 清空对象：</p></li>
+</ul>
+<p>typeof 运算符可返回以下原始类型之一：
+- string
+- number
+- boolean
+- undefined</p>
+</div>
+<div class="section" id="id4">
+<h2>数值<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>。。。</p>
+<p>&gt; <a class="reference external" href="http://www.w3school.com.cn/js/js_numbers.asp">http://www.w3school.com.cn/js/js_numbers.asp</a></p>
+</div>
+<div class="section" id="id5">
+<h2>字符串<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>。。。</p>
+</div>
+<div class="section" id="id6">
+<h2>类型转换<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>。。。</p>
+</div>
+<div class="section" id="id7">
+<h2>常量<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>。。。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../JavaScript.html" class="btn btn-neutral float-left" title="JavaScript" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Hongyi Wu(吴鸿毅)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

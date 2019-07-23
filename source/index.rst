@@ -51,3 +51,4 @@ Welcome to Web Note's documentation!
    :caption: JavaScript
 
    JavaScript.md
+   JavaScript/variables.rst
