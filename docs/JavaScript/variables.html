@@ -287,20 +287,84 @@
 <li><p>可以通过设置值为 null 清空对象：</p></li>
 <li><p>也可以通过设置值为 undefined 清空对象：</p></li>
 </ul>
-<p>typeof 运算符可返回以下原始类型之一：
-- string
-- number
-- boolean
-- undefined</p>
+<p>typeof 运算符可返回以下原始类型之一：</p>
+<ul class="simple">
+<li><p>string</p></li>
+<li><p>number</p></li>
+<li><p>boolean</p></li>
+<li><p>undefined</p></li>
+</ul>
 </div>
 <div class="section" id="id4">
 <h2>数值<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>。。。</p>
-<p>&gt; <a class="reference external" href="http://www.w3school.com.cn/js/js_numbers.asp">http://www.w3school.com.cn/js/js_numbers.asp</a></p>
+<p><strong>JavaScript 只有一种数值类型。书写数值时带不带小数点均可。</strong></p>
+<p>超大或超小的数可通过科学计数法来写：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">123</span><span class="nx">e5</span><span class="p">;</span>    <span class="c1">// 12300000</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">123</span><span class="nx">e</span><span class="o">-</span><span class="mi">5</span><span class="p">;</span>   <span class="c1">// 0.00123</span>
+</pre></div>
+</div>
+<p><strong>JavaScript 数值始终是 64 位的浮点数</strong></p>
+<ul class="simple">
+<li><p>与许多其他编程语言不同，JavaScript 不会定义不同类型的数，比如整数、短的、长的、浮点的等等。</p></li>
+<li><p>JavaScript 数值始终以双精度浮点数来存储，根据国际 IEEE 754 标准。</p></li>
+<li><p>此格式用 64 位存储数值，其中 0 到 51 存储数字（片段），52 到 62 存储指数，63 位存储符号</p></li>
+</ul>
+<p>Infinity （或 -Infinity）是 JavaScript 在计算数时超出最大可能数范围时返回的值。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">myNumber</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nx">myNumber</span> <span class="o">!=</span> <span class="kc">Infinity</span><span class="p">)</span> <span class="p">{</span>          <span class="c1">// 执行直到 Infinity</span>
+    <span class="nx">myNumber</span> <span class="o">=</span> <span class="nx">myNumber</span> <span class="o">*</span> <span class="nx">myNumber</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>JavaScript 会把前缀为 0x 的数值常量解释为十六进制。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span>             <span class="c1">// x 将是 255</span>
+</pre></div>
+</div>
+<p>绝不要用前导零写数字（比如 07）。一些 JavaScript 版本会把带有前导零的数解释为八进制。
+默认地，Javascript 把数显示为十进制小数。但是能够使用 toString() 方法把数输出为十六进制、八进制或二进制。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">myNumber</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>
+<span class="nx">myNumber</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>     <span class="c1">// 返回 80</span>
+<span class="nx">myNumber</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>      <span class="c1">// 返回 200</span>
+<span class="nx">myNumber</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>      <span class="c1">// 返回 10000000</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id5">
 <h2>字符串<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p>。。。</p>
+<p><strong>JavaScript 字符串用于存储和操作文本。</strong></p>
+<p>您可以在字符串中使用引号，只要不匹配围绕字符串的引号即可：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s good to see you again!&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">&quot;He is called &#39;Bill&#39;&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s1">&#39;He is called &quot;Bill&quot;&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>内建属性 <cite>length</cite> 可返回字符串的长度：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">txt</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">sln</span> <span class="o">=</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><cite>indexOf()</cite> 方法返回字符串中指定文本首次出现的索引（位置）：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;The full name of China is the People&#39;s Republic of China.&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;China&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><cite>lastIndexOf()</cite> 方法返回指定文本在字符串中最后一次出现的索引：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;The full name of China is the People&#39;s Republic of China.&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s2">&quot;China&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>如果未找到文本， indexOf() 和 lastIndexOf() 均返回 -1。</p></li>
+<li><p>两种方法都接受作为检索起始位置的第二个参数。</p></li>
+<li><p>lastIndexOf() 方法向后进行检索（从尾到头），这意味着：假如第二个参数是 50，则从位置 50 开始检索，直到字符串的起点。</p></li>
+</ul>
+<p><cite>search()</cite> 方法搜索特定值的字符串，并返回匹配的位置：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;The full name of China is the People&#39;s Republic of China.&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">&quot;locate&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>&gt; <a class="reference external" href="http://www.w3school.com.cn/js/js_string_methods.asp">http://www.w3school.com.cn/js/js_string_methods.asp</a></p>
 </div>
 <div class="section" id="id6">
 <h2>类型转换<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>

@@ -4,9 +4,9 @@
 .. Author: Hongyi Wu(吴鸿毅)
 .. Email: wuhongyi@qq.com 
 .. Created: 二 7月 23 21:52:07 2019 (+0800)
-.. Last-Updated: 二 7月 23 23:11:23 2019 (+0800)
+.. Last-Updated: 三 7月 24 21:24:07 2019 (+0800)
 ..           By: Hongyi Wu(吴鸿毅)
-..     Update #: 6
+..     Update #: 7
 .. URL: http://wuhongyi.cn 
 
 ##################################################
@@ -154,6 +154,7 @@ JavaScript 对象用花括号来书写。对象属性是 name:value 对，由逗
 
 
 typeof 运算符可返回以下原始类型之一：
+
 - string
 - number
 - boolean
@@ -165,18 +166,105 @@ typeof 运算符可返回以下原始类型之一：
 数值
 ============================================================
 
-。。。  
+**JavaScript 只有一种数值类型。书写数值时带不带小数点均可。**
 
-> http://www.w3school.com.cn/js/js_numbers.asp
+超大或超小的数可通过科学计数法来写：
+
+.. code:: javascript  
+
+  var x = 123e5;    // 12300000
+  var y = 123e-5;   // 0.00123
+
+**JavaScript 数值始终是 64 位的浮点数**
+
+- 与许多其他编程语言不同，JavaScript 不会定义不同类型的数，比如整数、短的、长的、浮点的等等。
+- JavaScript 数值始终以双精度浮点数来存储，根据国际 IEEE 754 标准。
+- 此格式用 64 位存储数值，其中 0 到 51 存储数字（片段），52 到 62 存储指数，63 位存储符号
+
+
+Infinity （或 -Infinity）是 JavaScript 在计算数时超出最大可能数范围时返回的值。
+
+.. code:: javascript  
+
+  var myNumber = 2;
+   
+  while (myNumber != Infinity) {          // 执行直到 Infinity
+      myNumber = myNumber * myNumber;
+  }
+
+  
+JavaScript 会把前缀为 0x 的数值常量解释为十六进制。
+
+.. code:: javascript  
+
+  var x = 0xFF;             // x 将是 255
+
+
+绝不要用前导零写数字（比如 07）。一些 JavaScript 版本会把带有前导零的数解释为八进制。
+默认地，Javascript 把数显示为十进制小数。但是能够使用 toString() 方法把数输出为十六进制、八进制或二进制。
+
+.. code:: javascript  
+  
+  var myNumber = 128;
+  myNumber.toString(16);     // 返回 80
+  myNumber.toString(8);      // 返回 200
+  myNumber.toString(2);      // 返回 10000000
+
+
+
 
   
 ============================================================
 字符串
 ============================================================
 
-。。。
-  
+**JavaScript 字符串用于存储和操作文本。**
 
+您可以在字符串中使用引号，只要不匹配围绕字符串的引号即可：
+
+.. code:: javascript  
+  
+  var answer = "It's good to see you again!";
+  var answer = "He is called 'Bill'";
+  var answer = 'He is called "Bill"';
+
+
+内建属性 `length` 可返回字符串的长度：
+
+.. code:: javascript  
+  
+  var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var sln = txt.length;
+
+`indexOf()` 方法返回字符串中指定文本首次出现的索引（位置）：
+
+.. code:: javascript  
+  
+  var str = "The full name of China is the People's Republic of China.";
+  var pos = str.indexOf("China");
+
+`lastIndexOf()` 方法返回指定文本在字符串中最后一次出现的索引：
+
+.. code:: javascript  
+  
+  var str = "The full name of China is the People's Republic of China.";
+  var pos = str.lastIndexOf("China");
+
+- 如果未找到文本， indexOf() 和 lastIndexOf() 均返回 -1。
+- 两种方法都接受作为检索起始位置的第二个参数。
+- lastIndexOf() 方法向后进行检索（从尾到头），这意味着：假如第二个参数是 50，则从位置 50 开始检索，直到字符串的起点。
+
+`search()` 方法搜索特定值的字符串，并返回匹配的位置：
+
+.. code:: javascript  
+  
+  var str = "The full name of China is the People's Republic of China.";
+  var pos = str.search("locate");
+
+
+
+> http://www.w3school.com.cn/js/js_string_methods.asp
+  
 ============================================================
 类型转换
 ============================================================
@@ -189,6 +277,7 @@ typeof 运算符可返回以下原始类型之一：
 
 。。。
 
+.. code:: javascript  
 
    
 .. 
