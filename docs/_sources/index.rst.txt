@@ -52,3 +52,4 @@ Welcome to Web Note's documentation!
 
    JavaScript.md
    JavaScript/variables.rst
+   JavaScript/Operators.rst

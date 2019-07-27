@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="运算符" href="Operators.html" />
     <link rel="prev" title="JavaScript" href="../JavaScript.html" /> 
 </head>
 
@@ -120,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id7">常量</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Operators.html">运算符</a></li>
 </ul>
 
             
@@ -364,11 +366,112 @@
 <span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">&quot;locate&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>&gt; <a class="reference external" href="http://www.w3school.com.cn/js/js_string_methods.asp">http://www.w3school.com.cn/js/js_string_methods.asp</a></p>
+<p><strong>提取部分字符串</strong></p>
+<p>有三种提取部分字符串的方法：</p>
+<ul class="simple">
+<li><p>slice(start, end)</p></li>
+<li><p>substring(start, end)</p></li>
+<li><p>substr(start, length)</p></li>
+</ul>
+<p><cite>slice()</cite> 提取字符串的某个部分并在新字符串中返回被提取的部分。该方法设置两个参数：起始索引（开始位置），终止索引（结束位置）。</p>
+<p>这个例子裁剪字符串中位置 7 到位置 13 的片段：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;Apple, Banana, Mango&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>如果某个参数为负，则从字符串的结尾开始计数。</p>
+<p>这个例子裁剪字符串中位置 -12 到位置 -6 的片段：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;Apple, Banana, Mango&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">13</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>如果省略第二个参数，则该方法将裁剪字符串的剩余部分：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>或者从结尾计数：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">13</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><cite>substring()</cite> 类似于 slice()。不同之处在于 substring() 无法接受负的索引。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;Apple, Banana, Mango&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>如果省略第二个参数，则该 substring() 将裁剪字符串的剩余部分。</p>
+<p><cite>substr()</cite> 类似于 slice()。不同之处在于第二个参数规定被提取部分的长度。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;Apple, Banana, Mango&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>如果省略第二个参数，则该 substr() 将裁剪字符串的剩余部分。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;Apple, Banana, Mango&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>如果首个参数为负，则从字符串的结尾计算位置。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;Apple, Banana, Mango&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>第二个参数不能为负，因为它定义的是长度。</p>
+<p><cite>replace()</cite> 方法用另一个值替换在字符串中指定的值：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;Please visit Microsoft!&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;Microsoft&quot;</span><span class="p">,</span> <span class="s2">&quot;W3School&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>replace() 方法不会改变调用它的字符串。它返回的是新字符串。</p></li>
+<li><p>默认地，replace() 只替换首个匹配。</p></li>
+<li><p>默认地，replace() 对大小写敏感。</p></li>
+</ul>
+<p><a class="reference external" href="http://www.w3school.com.cn/js/js_string_methods.asp">http://www.w3school.com.cn/js/js_string_methods.asp</a></p>
 </div>
 <div class="section" id="id6">
 <h2>类型转换<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>。。。</p>
+<p><strong>Number() 转换数值，String() 转换字符串，Boolean() 转换布尔值。</strong></p>
+<p>JavaScript 中有五种可包含值的数据类型：</p>
+<ul class="simple">
+<li><p>字符串（string）</p></li>
+<li><p>数字（number）</p></li>
+<li><p>布尔（boolean）</p></li>
+<li><p>对象（object）</p></li>
+<li><p>函数（function）</p></li>
+</ul>
+<p>有三种对象类型：</p>
+<ul class="simple">
+<li><p>对象（Object）</p></li>
+<li><p>日期（Date）</p></li>
+<li><p>数组（Array）</p></li>
+</ul>
+<p>同时有两种不能包含值的数据类型：</p>
+<ul class="simple">
+<li><p>null</p></li>
+<li><p>undefined</p></li>
+</ul>
+<p>可以使用 typeof 运算符来确定 JavaScript 变量的数据类型。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">typeof</span> <span class="s2">&quot;Bill&quot;</span>                 <span class="c1">// 返回 &quot;string&quot;</span>
+<span class="k">typeof</span> <span class="mf">3.14</span>                   <span class="c1">// 返回 &quot;number&quot;</span>
+<span class="k">typeof</span> <span class="kc">NaN</span>                    <span class="c1">// 返回 &quot;number&quot;</span>
+<span class="k">typeof</span> <span class="kc">false</span>                  <span class="c1">// 返回 &quot;boolean&quot;</span>
+<span class="k">typeof</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>              <span class="c1">// 返回 &quot;object&quot;</span>
+<span class="k">typeof</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Bill&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mi">62</span><span class="p">}</span>  <span class="c1">// 返回 &quot;object&quot;</span>
+<span class="k">typeof</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>             <span class="c1">// 返回 &quot;object&quot;</span>
+<span class="k">typeof</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{}</span>         <span class="c1">// 返回 &quot;function&quot;</span>
+<span class="k">typeof</span> <span class="nx">myCar</span>                  <span class="c1">// 返回 &quot;undefined&quot; *</span>
+<span class="k">typeof</span> <span class="kc">null</span>                   <span class="c1">// 返回 &quot;object&quot;</span>
+</pre></div>
+</div>
+<p>请注意：</p>
+<ul class="simple">
+<li><p>NaN 的数据类型是数值</p></li>
+<li><p>数组的数据类型是对象</p></li>
+<li><p>日期的数据类型是对象</p></li>
+<li><p>null 的数据类型是对象</p></li>
+<li><p>未定义变量的数据类型是 undefined</p></li>
+<li><p>尚未赋值的变量的数据类型也是 undefined</p></li>
+<li><p>无法使用 typeof 去判断 JavaScript 对象是否是数组（或日期）。</p></li>
+</ul>
 </div>
 <div class="section" id="id7">
 <h2>常量<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
@@ -383,6 +486,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Operators.html" class="btn btn-neutral float-right" title="运算符" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../JavaScript.html" class="btn btn-neutral float-left" title="JavaScript" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

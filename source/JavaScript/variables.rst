@@ -4,9 +4,9 @@
 .. Author: Hongyi Wu(吴鸿毅)
 .. Email: wuhongyi@qq.com 
 .. Created: 二 7月 23 21:52:07 2019 (+0800)
-.. Last-Updated: 三 7月 24 21:24:07 2019 (+0800)
+.. Last-Updated: 六 7月 27 17:41:26 2019 (+0800)
 ..           By: Hongyi Wu(吴鸿毅)
-..     Update #: 7
+..     Update #: 8
 .. URL: http://wuhongyi.cn 
 
 ##################################################
@@ -263,13 +263,144 @@ JavaScript 会把前缀为 0x 的数值常量解释为十六进制。
 
 
 
-> http://www.w3school.com.cn/js/js_string_methods.asp
+**提取部分字符串**
+
+有三种提取部分字符串的方法：
+
+- slice(start, end)
+- substring(start, end)
+- substr(start, length)
+
+`slice()` 提取字符串的某个部分并在新字符串中返回被提取的部分。该方法设置两个参数：起始索引（开始位置），终止索引（结束位置）。
+
+这个例子裁剪字符串中位置 7 到位置 13 的片段：
+
+.. code:: javascript  
+
+  var str = "Apple, Banana, Mango";
+  var res = str.slice(7,13);
+
+如果某个参数为负，则从字符串的结尾开始计数。
+
+这个例子裁剪字符串中位置 -12 到位置 -6 的片段：	  
+
+.. code:: javascript  
+
+  var str = "Apple, Banana, Mango";
+  var res = str.slice(-13,-7);
+
+如果省略第二个参数，则该方法将裁剪字符串的剩余部分：
+
+.. code:: javascript  
+
+  var res = str.slice(7);
+  
+或者从结尾计数：
+
+.. code:: javascript  
+
+  var res = str.slice(-13);
+
+
+`substring()` 类似于 slice()。不同之处在于 substring() 无法接受负的索引。
+
+.. code:: javascript  
+
+  var str = "Apple, Banana, Mango";
+  var res = str.substring(7,13);
+
+如果省略第二个参数，则该 substring() 将裁剪字符串的剩余部分。
+
+
+`substr()` 类似于 slice()。不同之处在于第二个参数规定被提取部分的长度。
+
+.. code:: javascript  
+
+  var str = "Apple, Banana, Mango";
+  var res = str.substr(7,6);	  
+
+如果省略第二个参数，则该 substr() 将裁剪字符串的剩余部分。
+
+.. code:: javascript  
+
+  var str = "Apple, Banana, Mango";
+  var res = str.substr(7);
+
+如果首个参数为负，则从字符串的结尾计算位置。
+
+.. code:: javascript  
+
+  var str = "Apple, Banana, Mango";
+  var res = str.substr(-5);
+
+第二个参数不能为负，因为它定义的是长度。
+
+
+`replace()` 方法用另一个值替换在字符串中指定的值：
+
+.. code:: javascript  
+
+  str = "Please visit Microsoft!";
+  var n = str.replace("Microsoft", "W3School");  
+
+- replace() 方法不会改变调用它的字符串。它返回的是新字符串。
+- 默认地，replace() 只替换首个匹配。
+- 默认地，replace() 对大小写敏感。
+
+  
+http://www.w3school.com.cn/js/js_string_methods.asp
   
 ============================================================
 类型转换
 ============================================================
 
-。。。
+**Number() 转换数值，String() 转换字符串，Boolean() 转换布尔值。**
+
+JavaScript 中有五种可包含值的数据类型：
+
+- 字符串（string）
+- 数字（number）
+- 布尔（boolean）
+- 对象（object）
+- 函数（function）
+
+有三种对象类型：
+
+- 对象（Object）
+- 日期（Date）
+- 数组（Array）
+
+同时有两种不能包含值的数据类型：
+
+- null
+- undefined
+
+
+可以使用 typeof 运算符来确定 JavaScript 变量的数据类型。
+
+.. code:: javascript  
+  
+  typeof "Bill"                 // 返回 "string"
+  typeof 3.14                   // 返回 "number"
+  typeof NaN                    // 返回 "number"
+  typeof false                  // 返回 "boolean"
+  typeof [1,2,3,4]              // 返回 "object"
+  typeof {name:'Bill', age:62}  // 返回 "object"
+  typeof new Date()             // 返回 "object"
+  typeof function () {}         // 返回 "function"
+  typeof myCar                  // 返回 "undefined" *
+  typeof null                   // 返回 "object"
+
+请注意：
+
+- NaN 的数据类型是数值
+- 数组的数据类型是对象
+- 日期的数据类型是对象
+- null 的数据类型是对象
+- 未定义变量的数据类型是 undefined
+- 尚未赋值的变量的数据类型也是 undefined
+- 无法使用 typeof 去判断 JavaScript 对象是否是数组（或日期）。
+	  
 
 ============================================================
 常量
@@ -277,7 +408,7 @@ JavaScript 会把前缀为 0x 的数值常量解释为十六进制。
 
 。。。
 
-.. code:: javascript  
+
 
    
 .. 
