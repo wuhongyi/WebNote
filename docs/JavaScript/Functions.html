@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>函数 &mdash; Web Note 0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="异常" href="Errors.html" />
+    <link rel="prev" title="循环" href="Loops.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Web Note
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">简介</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HTML.html">基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLshuxing.html">HTML 属性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLbiaoti.html">HTML 标题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLduanluo.html">HTML 段落</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLyangshi.html">HTML 样式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLwenbengeshihua.html">HTML 文本格式化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLyinyong.html">HTML 引用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLlianjie.html">HTML 链接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLtuxiang.html">HTML 图像</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLbiaoge.html">HTML 表格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLliebiao.html">HTML 列表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLliebiao.html#id2">有序列表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLkuai.html">HTML 块</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLlei.html">HTML 类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLbuju.html">HTML布局</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HTML/HTMLtoubu.html">HTML头部</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CSS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CSS.html">CSS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">JavaScript</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../JavaScript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">变量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Operators.html">运算符</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Loops.html">循环</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">函数</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#javascript">JavaScript 函数语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">函数调用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">函数返回</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">()运算符调用函数</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Errors.html">异常</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Note</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>函数</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/JavaScript/Functions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>函数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://www.w3school.com.cn/js/js_functions.asp">https://www.w3school.com.cn/js/js_functions.asp</a></p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">p1</span> <span class="o">*</span> <span class="nx">p2</span><span class="p">;</span>
+    <span class="c1">// 该函数返回 p1 和 p2 的乘积</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><cite>arguments.length</cite> 会返回函数被调用时收到的参数数目：</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>如果函数调用的参数太多（超过声明），则可以使用 arguments 对象来达到这些参数。</p>
+<p>JavaScript 函数有一个名为 arguments 对象的内置对象。arguments 对象包含函数调用时使用的参数数组。这样，就可以简单地使用函数来查找（例如）数字列表中的最高值：</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="nx">x</span> <span class="o">=</span> <span class="nx">findMax</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">88</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">findMax</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="o">-</span><span class="kc">Infinity</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">max</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">max</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="javascript">
+<h2>JavaScript 函数语法<a class="headerlink" href="#javascript" title="永久链接至标题">¶</a></h2>
+<p>JavaScript 函数通过 <cite>function</cite> 关键词进行定义，其后是函数名和括号 ()。函数名可包含字母、数字、下划线和美元符号（规则与变量名相同）。</p>
+<p>圆括号可包括由逗号分隔的参数：
+.. code-block:: JavaScript</p>
+<blockquote>
+<div><p>(参数 1, 参数 2, …)</p>
+</div></blockquote>
+<p>由函数执行的代码被放置在花括号中：{}</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">name</span><span class="p">(</span><span class="nx">参数</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">参数</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">参数</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">要执行的代码</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>函数参数（Function parameters）是在函数定义中所列的名称。</p></li>
+<li><p>函数参数（Function arguments）是当调用函数时由函数接收的真实的值。</p></li>
+<li><p>在函数中，参数是局部变量。</p></li>
+<li><p>在其他编程语言中，函数近似程序（Procedure）或子程序（Subroutine）。</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>函数调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>函数中的代码将在其他代码调用该函数时执行：</p>
+<ul class="simple">
+<li><p>当事件发生时（当用户点击按钮时）</p></li>
+<li><p>当 JavaScript 代码调用时</p></li>
+<li><p>自动的（自调用）</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>函数返回<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>当 JavaScript 到达 return 语句，函数将停止执行。</p></li>
+<li><p>如果函数被某条语句调用，JavaScript 将在调用语句之后“返回”执行代码。</p></li>
+<li><p>函数通常会计算出返回值。这个返回值会返回给调用者：</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>()运算符调用函数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>访问没有 () 的函数将返回函数定义</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Errors.html" class="btn btn-neutral float-right" title="异常" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Loops.html" class="btn btn-neutral float-left" title="循环" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Hongyi Wu(吴鸿毅)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

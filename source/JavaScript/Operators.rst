@@ -4,9 +4,9 @@
 .. Author: Hongyi Wu(吴鸿毅)
 .. Email: wuhongyi@qq.com 
 .. Created: 六 7月 27 17:45:29 2019 (+0800)
-.. Last-Updated: 六 7月 27 18:04:25 2019 (+0800)
+.. Last-Updated: 四 8月  1 20:09:19 2019 (+0800)
 ..           By: Hongyi Wu(吴鸿毅)
-..     Update #: 1
+..     Update #: 4
 .. URL: http://wuhongyi.cn 
 
 ##################################################
@@ -16,7 +16,7 @@
 
 算数运算符用于对数字执行算数运算：
 
-.. code:: javascript 
+.. code-block:: JavaScript
 
   运算符 描述	  
   +	加法
@@ -29,7 +29,7 @@
 
 赋值运算符
 
-.. code:: javascript 
+.. code-block:: JavaScript
 
   运算符  例子    等同于
   =	x = y	x = y
@@ -42,7 +42,7 @@
 
 比较运算符
 
-.. code:: javascript 
+.. code-block:: JavaScript
 
   运算符	描述
   ==	等于
@@ -57,7 +57,7 @@
 
 逻辑运算符
 
-.. code:: javascript 
+.. code-block:: JavaScript 
 
   运算符	描述
   &&	逻辑与
