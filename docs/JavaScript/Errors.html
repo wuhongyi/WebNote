@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="对象" href="Object.html" />
     <link rel="prev" title="函数" href="Functions.html" /> 
 </head>
 
@@ -113,9 +114,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../JavaScript.html">JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variables.html">变量</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Operators.html">运算符</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Number.html">数值方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Math.html">Math 对象</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Array.html">Array数组</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Switch.html">Switch 语句</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Loops.html">循环</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Functions.html">函数</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">异常</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">异常</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#try-catch">try 和 catch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">抛出错误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#throw">throw 语句</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finally">finally 语句</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Object.html">对象</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">实例</a></li>
 </ul>
 
             
@@ -183,6 +196,127 @@
   <div class="section" id="id1">
 <h1>异常<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p><a class="reference external" href="https://www.w3school.com.cn/js/js_errors.asp">https://www.w3school.com.cn/js/js_errors.asp</a></p>
+<ul class="simple">
+<li><p>try 语句使您能够测试代码块中的错误。</p></li>
+<li><p>catch 语句允许您处理错误。</p></li>
+<li><p>throw 语句允许您创建自定义错误。</p></li>
+<li><p>finally 使您能够执行代码，在 try 和 catch 之后，无论结果如何。</p></li>
+</ul>
+<div class="section" id="try-catch">
+<h2>try 和 catch<a class="headerlink" href="#try-catch" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>try 语句允许您定义一个代码块，以便在执行时检测错误。</p></li>
+<li><p>catch 语句允许你定义一个要执行的代码块，如果 try 代码块中发生错误。</p></li>
+</ul>
+<p>JavaScript 语句 try 和 catch 成对出现：</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+     <span class="c1">//供测试的代码块</span>
+<span class="p">}</span>
+ <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">//处理错误的代码块</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>抛出错误<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>当发生错误时，JavaScript 通常会停止并产生错误消息。</p>
+<p>技术术语是这样描述的：JavaScript 将抛出异常（抛出错误）。</p>
+<p>JavaScript 实际上会创建带有两个属性的 Error 对象：name 和 message。</p>
+<ul class="simple">
+<li><p>name  设置或返回错误名</p></li>
+<li><p>message       设置或返回错误消息（一条字符串）</p></li>
+</ul>
+<p>error 的 name 属性可返回六个不同的值：</p>
+<ul class="simple">
+<li><p>EvalError     已在 eval() 函数中发生的错误</p></li>
+<li><p>RangeError    已发生超出数字范围的错误</p></li>
+<li><p>ReferenceError        已发生非法引用</p></li>
+<li><p>SyntaxError   已发生语法错误</p></li>
+<li><p>TypeError     已发生类型错误</p></li>
+<li><p>URIError      在 encodeURI() 中已发生的错误</p></li>
+</ul>
+</div>
+<div class="section" id="throw">
+<h2>throw 语句<a class="headerlink" href="#throw" title="永久链接至标题">¶</a></h2>
+<p>throw 语句允许您创建自定义错误。从技术上讲您能够抛出异常（抛出错误）。</p>
+<p>异常可以是 JavaScript 字符串、数字、布尔或对象：</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="k">throw</span> <span class="s2">&quot;Too big&quot;</span><span class="p">;</span>    <span class="c1">// 抛出文本</span>
+<span class="k">throw</span> <span class="mi">500</span><span class="p">;</span>          <span class="c1">//抛出数字</span>
+</pre></div>
+</div>
+<p>如果把 throw 与 try 和 catch 一同使用，就可以控制程序流并生成自定义错误消息。</p>
+<p>本例会检查输入。如果值是错误的，将抛出异常（err）。该异常（err）被 catch 语句捕获并显示一条自定义的错误消息：</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>请输入 5 - 10 之间的数字：<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;demo&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;myFunction()&quot;</span><span class="p">&gt;</span>测试输入<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;message&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="nx">message</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">);</span>
+    <span class="nx">message</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="nx">x</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">throw</span> <span class="s2">&quot;空的&quot;</span><span class="p">;</span>
+         <span class="k">if</span><span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span> <span class="k">throw</span> <span class="s2">&quot;不是数字&quot;</span><span class="p">;</span>
+         <span class="nx">x</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="k">throw</span>  <span class="s2">&quot;太小&quot;</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="k">throw</span> <span class="s2">&quot;太大&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">message</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;输入是 &quot;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="finally">
+<h2>finally 语句<a class="headerlink" href="#finally" title="永久链接至标题">¶</a></h2>
+<p>finally 语句允许您在 try 和 catch 之后执行代码，无论结果：</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+     <span class="c1">//供测试的代码块</span>
+<span class="p">}</span>
+ <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">//处理错误的代码块</span>
+<span class="p">}</span>
+<span class="k">finally</span> <span class="p">{</span>
+     <span class="c1">//无论 try / catch 结果如何都执行的代码块</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="nx">message</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">);</span>
+    <span class="nx">message</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="nx">x</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">throw</span> <span class="s2">&quot;是空的&quot;</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span> <span class="k">throw</span> <span class="s2">&quot;不是数字&quot;</span><span class="p">;</span>
+         <span class="nx">x</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span>  <span class="mi">10</span><span class="p">)</span> <span class="k">throw</span> <span class="s2">&quot;太大&quot;</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span>  <span class="mi">5</span><span class="p">)</span> <span class="k">throw</span> <span class="s2">&quot;太小&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">message</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;错误：&quot;</span> <span class="o">+</span> <span class="nx">err</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">finally</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -192,6 +326,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Object.html" class="btn btn-neutral float-right" title="对象" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Functions.html" class="btn btn-neutral float-left" title="函数" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

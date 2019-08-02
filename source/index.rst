@@ -53,6 +53,12 @@ Welcome to Web Note's documentation!
    JavaScript.md
    JavaScript/variables.rst
    JavaScript/Operators.rst
+   JavaScript/Number.rst
+   JavaScript/Math.rst
+   JavaScript/Array.rst
+   JavaScript/Switch.rst
    JavaScript/Loops.rst
    JavaScript/Functions.rst
    JavaScript/Errors.rst
+   JavaScript/Object.rst
+   JavaScript/Examples.rst

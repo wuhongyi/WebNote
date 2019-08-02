@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>循环 &mdash; Web Note 0.0 文档</title>
+  <title>实例 &mdash; Web Note 0.0 文档</title>
   
 
   
@@ -37,8 +37,7 @@
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="函数" href="Functions.html" />
-    <link rel="prev" title="Switch 语句" href="Switch.html" /> 
+    <link rel="prev" title="对象" href="Object.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -118,17 +117,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Math.html">Math 对象</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Array.html">Array数组</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Switch.html">Switch 语句</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">循环</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#for">For 循环</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#for-in">For/In 循环</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#while">While 循环</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#do-while">Do/While 循环</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Loops.html">循环</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Functions.html">函数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Errors.html">异常</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Object.html">对象</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples.html">实例</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">实例</a></li>
 </ul>
 
             
@@ -174,13 +167,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>循环</li>
+      <li>实例</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/JavaScript/Loops.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/JavaScript/Examples.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -194,56 +187,24 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>循环<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p><a class="reference external" href="https://www.w3school.com.cn/js/js_loop_for.asp">https://www.w3school.com.cn/js/js_loop_for.asp</a></p>
-<p>JavaScript 支持不同类型的循环：</p>
+<h1>实例<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://www.w3school.com.cn/js/js_examples.asp">https://www.w3school.com.cn/js/js_examples.asp</a></p>
+<p>JavaScript 能做什么？</p>
 <ul class="simple">
-<li><p>for - 多次遍历代码块</p></li>
-<li><p>for/in - 遍历对象属性</p></li>
-<li><p>while - 当指定条件为 true 时循环一段代码块</p></li>
-<li><p>do/while - 当指定条件为 true 时循环一段代码块</p></li>
+<li><p>能够改变 HTML 内容</p></li>
+<li><p>能够改变 HTML 属性</p></li>
+<li><p>能够改变 CSS 样式</p></li>
+<li><p>能够隐藏 HTML 元素</p></li>
+<li><p>能够显示隐藏的 HTML 元素</p></li>
 </ul>
-<div class="section" id="for">
-<h2>For 循环<a class="headerlink" href="#for" title="永久链接至标题">¶</a></h2>
-<p>for 循环的语法如下：</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nx">语句</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">语句</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">语句</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-     <span class="nx">要执行的代码块</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="for-in">
-<h2>For/In 循环<a class="headerlink" href="#for-in" title="永久链接至标题">¶</a></h2>
-<p>JavaScript for/in 语句遍历对象的属性：</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span><span class="nx">fname</span><span class="o">:</span><span class="s2">&quot;Bill&quot;</span><span class="p">,</span> <span class="nx">lname</span><span class="o">:</span><span class="s2">&quot;Gates&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span><span class="mi">62</span><span class="p">};</span>
-
-<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">x</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="nx">x</span> <span class="k">in</span> <span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">text</span> <span class="o">+=</span> <span class="nx">person</span><span class="p">[</span><span class="nx">x</span><span class="p">];</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="while">
-<h2>While 循环<a class="headerlink" href="#while" title="永久链接至标题">¶</a></h2>
-<p>while 循环会一直循环代码块，只要指定的条件为 true。</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="nx">条件</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">要执行的代码块</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="do-while">
-<h2>Do/While 循环<a class="headerlink" href="#do-while" title="永久链接至标题">¶</a></h2>
-<p>do/while 循环是 while 循环的变体。在检查条件是否为真之前，这种循环会执行一次代码块，然后只要条件为真就会重复循环。</p>
-<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="k">do</span> <span class="p">{</span>
-    <span class="nx">要执行的代码块</span>
-<span class="p">}</span>
-<span class="k">while</span> <span class="p">(</span><span class="nx">条件</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
+<p>在何处插入 JavaScript</p>
+<ul class="simple">
+<li><p>&lt;head&gt; 中的 JavaScript</p></li>
+<li><p>&lt;body&gt; 中的 JavaScript</p></li>
+<li><p>外部文件中的 JavaScript</p></li>
+<li><p>外部 url 中的 JavaScript</p></li>
+<li><p>外部文件夹中的 JavaScript</p></li>
+</ul>
 </div>
 
 
@@ -254,10 +215,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Functions.html" class="btn btn-neutral float-right" title="函数" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="Switch.html" class="btn btn-neutral float-left" title="Switch 语句" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Object.html" class="btn btn-neutral float-left" title="对象" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
