@@ -124,6 +124,10 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">对象</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Examples.html">实例</a></li>
 </ul>
+<p class="caption"><span class="caption-text">jQuery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../jQuery.html">jQuery</a></li>
+</ul>
 
             
           
@@ -189,6 +193,30 @@
             
   <div class="section" id="id1">
 <h1>对象<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">eyecolor</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">first</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">last</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">eyeColor</span> <span class="o">=</span> <span class="nx">eyecolor</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">myFather</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Bill&quot;</span><span class="p">,</span> <span class="s2">&quot;Gates&quot;</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">myMother</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Steve&quot;</span><span class="p">,</span> <span class="s2">&quot;Jobs&quot;</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>有时，希望向所有给定类型的已有对象添加新属性（或方法）。有时，希望向对象构造器添加新属性（或方法）。</p>
+<p>JavaScript <strong>prototype</strong> 属性允许您为对象构造器添加新属性：</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">eyecolor</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">first</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">last</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">eyeColor</span> <span class="o">=</span> <span class="nx">eyecolor</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">nationality</span> <span class="o">=</span> <span class="s2">&quot;English&quot;</span><span class="p">;</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
 </div>
 
 

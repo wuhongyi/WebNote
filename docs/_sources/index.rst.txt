@@ -62,3 +62,11 @@ Welcome to Web Note's documentation!
    JavaScript/Errors.rst
    JavaScript/Object.rst
    JavaScript/Examples.rst
+
+====================================
+
+.. toctree::
+   :maxdepth: 3
+   :caption: jQuery
+
+   jQuery.rst
