@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 日 7月  7 21:28:21 2019 (+0800)
-;; Last-Updated: 日 7月 21 22:22:25 2019 (+0800)
+;; Last-Updated: 六 8月 10 20:51:50 2019 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 28
+;;     Update #: 36
 ;; URL: http://wuhongyi.cn -->
 
 <!doctype html> <!-- 声明文档类型为HTML -->
@@ -38,18 +38,36 @@
 
 	 外边距  margin:  10px 20 px 30px 40px;  上右下左距离  
 	                 10 px;                 四个值一样
-			 10 px 20px;            上下第一个，左右第二个
-			 10 px 20px 30px;       上右下，左与右相等
+	                 10 px 20px;            上下第一个，左右第二个
+	                 10 px 20px 30px;       上右下，左与右相等
 	                 10px auto;             auto居中
-			 10px 20px auto;
-			 10px 20px 30px auto;
-			 10px 20px 30px 40px auto;
+	                 10px 20px auto;
+	                 10px 20px 30px auto;
+	                 10px 20px 30px 40px auto;
 	 边框    border:  12px solid yellow;
 	 填充    padding: 10px 20px 30px 40px;  上右下左距离  
 	                 10 px;                 四个值一样
-			 10 px 20px;            上下第一个，左右第二个
-			 10 px 20px 30px;       上右下，左与右相等
+	                 10 px 20px;            上下第一个，左右第二个
+	                 10 px 20px 30px;       上右下，左与右相等
 	 文本    content 设置宽度高度其实是设置这个的参数
+
+	 水平排列 float: left;
+	 垂直排列 clear: both;
+
+
+	 box-sizing: content-box; 标准盒模型的width组成：content（不包含 padding 和 border）
+	 box-sizing: border-box;  IE盒模型的width组成：content + 2 * padding + 2 * border
+
+	 margin越界：当父元素没有边框border时，设置第一个子元素的margin-top值的时候，会出现margin-top值加在父元素上的现象
+
+	 margin负值
+	 margin-top: -75px;//上移
+	 margin-left: 75px;//右移
+
+	 定位机制 absolute relative fixed
+	 position: absolute; // relative;
+	 top: -75px;
+	 left: 75px;
       -->
 
     <!-- HTML不区分大小写 --推荐使用小写  -->
