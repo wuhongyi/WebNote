@@ -4,14 +4,14 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 日 6月 30 16:05:18 2019 (+0800)
-;; Last-Updated: 日 6月 30 16:10:31 2019 (+0800)
+;; Last-Updated: 四 2月 13 23:50:28 2020 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 1
+;;     Update #: 2
 ;; URL: http://wuhongyi.cn -->
 
 # HTML头部
 
-## HTML <head> 元素
+## HTML \<head\> 元素
 
 /<head/> 元素是所有头部元素的容器。/<head/> 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等。
 
@@ -20,7 +20,7 @@
 <title>、<base>、<link>、<meta>、<script> 以及 <style>。
 ```
 
-## HTML <title> 元素
+## HTML \<title\> 元素
 
 /<title/> 标签定义文档的标题。
 
